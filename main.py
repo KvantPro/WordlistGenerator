@@ -32,7 +32,7 @@ if __name__ == "__main__":
     passwd = GenerateWords(4)
     #print("--- %s seconds ---" % (time.time() - start_time))
     #По желанию
-    #file = open("parser\\passwd.txt", "w")
+    #file = open("passwd.txt", "w")
     #for item in passwd:
     #    file.write(f"{item}\n")
     #file.close()
