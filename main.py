@@ -1,12 +1,12 @@
-import time
-from progress.bar import IncrementalBar
+#import time
+#from progress.bar import IncrementalBar
 def GenerateWords(leght, words = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"):
     Programm = True
     password = list("0" * leght)
     final = []
     len_passord = len(words) ** leght
-    print(len_passord)
-    bar = IncrementalBar('[*] Generate passwords', max=len_passord, suffix='%(percent).1f%%')
+    #print(len_passord)
+    #bar = IncrementalBar('[*] Generate passwords', max=len_passord, suffix='%(percent).1f%%')
     while Programm:
         i = leght - 1
         while i >= 0:
@@ -23,15 +23,16 @@ def GenerateWords(leght, words = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRST
                 temp += words[int(password[i])]
             final.append(temp)
             password[leght - 1] = int(password[leght - 1]) + 1
-        bar.next()
-    bar.finish()
+        #bar.next()
+   #bar.finish()
     return final
 
 if __name__ == "__main__":
-    start_time = time.time()
+    #start_time = time.time()
     passwd = GenerateWords(4)
-    print("--- %s seconds ---" % (time.time() - start_time))
-    file = open("parser\\passwd.txt", "w")
-    for item in passwd:
-        file.write(f"{item}\n")
-    file.close()
+    #print("--- %s seconds ---" % (time.time() - start_time))
+    #По желанию
+    #file = open("parser\\passwd.txt", "w")
+    #for item in passwd:
+    #    file.write(f"{item}\n")
+    #file.close()
