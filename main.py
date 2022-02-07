@@ -1,7 +1,6 @@
 import time
 from progress.bar import IncrementalBar
-def GenerateWords(leght):
-    words = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+def GenerateWords(leght, words = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"):
     Programm = True
     password = list("0" * leght)
     final = []
@@ -30,5 +29,9 @@ def GenerateWords(leght):
 
 if __name__ == "__main__":
     start_time = time.time()
-    GenerateWords(4)
+    passwd = GenerateWords(4)
     print("--- %s seconds ---" % (time.time() - start_time))
+    file = open("parser\\passwd.txt", "w")
+    for item in passwd:
+        file.write(f"{item}\n")
+    file.close()
