@@ -2,11 +2,9 @@
 Python so slow...
 # Usage
 ```Python
-from WordlistGenerator import GenerateWords
+from WG import WordlistGenerator
 
-leght = 3
-passwd = GenerateWords(leght) # GenerateWords(leght, words)
-
-print(passwd)
-#format - list: ["aa", "ab", "ba", "bb"]
+passwd = WordlistGenerator(2)
+for i in range(passwd.len_passord):
+    print(passwd.next())
 ```
