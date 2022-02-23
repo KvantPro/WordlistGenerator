@@ -5,6 +5,6 @@ Python so slow...
 from WG import WordlistGenerator
 
 passwd = WordlistGenerator(2)
-for i in range(passwd.len_passord):
+for i in range(passwd.len_password):
     print(passwd.next())
 ```
